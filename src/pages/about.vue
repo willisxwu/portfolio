@@ -1,7 +1,6 @@
 <script setup lang="ts">
 interface IPhilosophyItems {
   image: string
-  ait: string
   title: string
   description: string
 }
@@ -9,21 +8,18 @@ interface IPhilosophyItems {
 const philosophyItems: IPhilosophyItems[] = [
   {
     image: 'https://img.icons8.com/sf-black/400/2d2d2d/circle-thin.png',
-    ait: 'image-circle',
     title: 'Efficiency through Simplicity',
     description:
       'Believing that less is more, I focus on creating streamlined, maintainable solutions that maximize impact while minimizing complexity.',
   },
   {
     image: 'https://img.icons8.com/sf-regular-filled/400/2d2d2d/infinity.png',
-    ait: 'image-infinity',
     title: 'Reusability',
     description:
       'Crafting versatile features that can be reused across various projects, ensuring long-term value and adaptability in every solution.',
   },
   {
     image: 'https://img.icons8.com/ios/400/2d2d2d/puzzle-matching.png',
-    ait: 'image-puzzle',
     title: 'Empowerment through Integration',
     description:
       'Integrating external controls to make functionalities accessible to non-technical users, reducing maintenance and enhancing usability across the board.',
@@ -69,8 +65,16 @@ const philosophyItems: IPhilosophyItems[] = [
         Willis’s Development Philosophy
       </p>
       <div class="mt-5 grid grid-cols-3 gap-5 max-w-300">
-        <div v-for="item in philosophyItems" class="p-5 bg-white rounded-2">
-          <img class="max-w-20" :src="item.image" :alt="item.ait" />
+        <div
+          v-for="item in philosophyItems"
+          :key="item.title"
+          class="p-5 bg-white rounded-2"
+        >
+          <img
+            class="max-w-20"
+            :src="item.image"
+            :alt="`${item.title.toLowerCase().replaceAll(' ', '-')}-icon`"
+          />
           <div>
             <p class="text-title-xl-lighter" v-text="item.title"></p>
             <p class="mt-2 text-content-sm" v-text="item.description"></p>
