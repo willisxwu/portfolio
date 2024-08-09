@@ -39,7 +39,7 @@ const handleScroll = () => {
 
 const getHeight = () => {
   const element = document.querySelector('.nav-container')
-  return element ? element.clientHeight + 30 : 0
+  return element ? element.clientHeight + 35 : 0
 }
 
 const emit = defineEmits<{
@@ -75,13 +75,14 @@ onUnmounted(() => {
       >
         <router-link
           v-for="item in navigationItems"
+          :key="item.path"
           :to="item.path"
-          class="trans-300 hover:scale-110"
+          class="trans-300 hover:scale-120"
           :class="{ 'text-bold ': currentRoute.path === item.path }"
           v-text="item.name"
         >
         </router-link>
-        <div class="trans-300 hover:scale-110">Contact</div>
+        <div class="cursor-pointer trans-300 hover:scale-120">Contact</div>
       </div>
     </div>
   </div>
