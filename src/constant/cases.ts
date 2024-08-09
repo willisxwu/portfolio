@@ -5,41 +5,41 @@ import landingPageImage from '../assets/landingPages.jpg'
 import shippingRestrictionsImage from '../assets/shipping-restrictions.jpg'
 
 interface ICaseItem {
+  handle: string
   image: string
   title: string
   description: string
-  path: string
 }
 
 export const cases: ICaseItem[] = [
   {
+    handle: 'membership-registration-bonus',
     image: membershipBonusImage,
     title: 'Membership Registration Bonus',
-    description: 'Developed a feature that provides customers with a shopping discount code upon completing their registration information.',
-    path: '/works/membership-registration-bonus'
+    description: 'Developed a registration bonus feature for an online shopping website, offering a discount code to encourage first-time purchases.'
   },
   {
+    handle: 'cms-for-content-management',
     image: cmsImage,
     title: 'CMS for Content Management',
-    description: 'Developed a CMS that allows non-developers to manage promotional content and phone case design collections, seamlessly updating the website display.',
-    path: '/works/cms-for-content-management'
+    description: 'Created a CMS feature for an online shopping website, enabling real-time content and asset adjustments.'
   },
   {
+    handle: 'themed-interactive-game-page',
     image: themedGameImage,
     title: 'Themed Interactive Game Page',
-    description: 'Developed an interactive game page featuring name entry, a guessing game with prize opportunities, product viewing, sharing options, and a guided link to the registration site.',
-    path: '/works/themed-interactive-game-page'
+    description: 'Developed a themed interactive game for a UK online shopping website, boosting product exposure and guiding new customer registrations.'
   },
   {
+    handle: 'responsive-product-landing-pages',
     image: landingPageImage,
     title: 'Responsive Product Landing Pages',
-    description: 'Developed product landing pages in close collaboration with UI/UX teams, optimizing designs for desktop, tablet, and mobile to showcase products effectively.',
-    path: '/works/responsive-product-landing-pages'
+    description: 'Created responsive product landing pages for an online shopping website, effectively showcasing products.'
   },
   {
+    handle: 'region-specific-shipping-restrictions',
     image: shippingRestrictionsImage,
     title: 'Region-Specific Shipping Restrictions',
-    description: 'Implemented a system to enforce shipping restrictions for designer collaboration products, with real-time data updates and alerts for unauthorized regions.',
-    path: '/works/region-specific-shipping-restrictions'
+    description: 'Implemented shipping restrictions for specific regions, ensuring compliance with authorized shipping areas.'
   }
 ]

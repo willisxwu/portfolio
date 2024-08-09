@@ -13,12 +13,12 @@ import { cases } from '../../constant/cases'
     <div class="mt-10 flex flex-wrap gap-10">
       <Card
         v-for="item in cases"
-        :key="item.path"
+        :key="item.handle"
         class="w-200"
         :title="item.title"
         :description="item.description"
         :image="item.image"
-        :path="item.path"
+        :path="`/works/${item.handle}`"
       />
     </div>
   </div>
