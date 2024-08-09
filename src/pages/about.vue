@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import SpotlightCard from '../components/SpotlightCard.vue'
+
 interface IPhilosophyItems {
   image: string
   title: string
@@ -64,22 +66,15 @@ const philosophyItems: IPhilosophyItems[] = [
       <p class="text-(content-md-denser gray-70)">
         Willis’s Development Philosophy
       </p>
-      <div class="mt-5 grid grid-cols-3 gap-5 max-w-300">
-        <div
+      <div class="mt-5 flex flex-wrap gap-5">
+        <SpotlightCard
           v-for="item in philosophyItems"
           :key="item.title"
-          class="p-5 bg-white rounded-2"
-        >
-          <img
-            class="max-w-20"
-            :src="item.image"
-            :alt="`${item.title.toLowerCase().replaceAll(' ', '-')}-icon`"
-          />
-          <div>
-            <p class="text-title-xl-lighter" v-text="item.title"></p>
-            <p class="mt-2 text-content-sm" v-text="item.description"></p>
-          </div>
-        </div>
+          class="max-w-85"
+          :image="item.image"
+          :title="item.title"
+          :description="item.description"
+        />
       </div>
     </div>
     <div class="pb-40">
