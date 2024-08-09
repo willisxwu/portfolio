@@ -8,7 +8,7 @@ import { cases } from '../../constant/cases'
     <div class="text-(headline-xl-lighter gray-90)">Previous Works</div>
     <p class="max-w-150 text-(content-md gray-70)">
       Experience in in-house development and creating successful consumer-facing
-      (B2C) solutions, including Shopify e-commerce.
+      (B2C) solutions, including e-commerce.
     </p>
     <div class="mt-10 flex flex-wrap gap-10">
       <Card
