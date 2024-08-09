@@ -1,21 +1,16 @@
 const modules = import.meta.glob('../pages/**/*.vue')
 
 const routes = Object.keys(modules).map((path) => {
-  const name = path.split('/').pop()?.replace('.vue', '')
+  const routePath = path
+    .replace('../pages', '')
+    .replace('.vue', '')
+    .toLowerCase()
+    .replace(/\/index$/, '/')
+
   return {
-    path: `/${name?.toLowerCase()}`,
+    path: routePath === '/index' ? '/' : routePath,
     component: modules[path],
   }
 })
-
-routes.push(
-  {
-    path: '/',
-    component: modules['../pages/index.vue'],
-  },
-  {
-    path: '/works',
-    component: modules['../pages/works/index.vue'],
-  },)
 
 export default routes
