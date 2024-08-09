@@ -1,11 +1,12 @@
 <script setup lang="ts">
 import linkedIn from '../assets/linkedIn.svg'
 import Card from '../components/CaseCard.vue'
+import { cases } from '../constant/cases'
 </script>
 
 <template>
   <div class="pl-20">
-    <div class="flex gap-5">
+    <div class="flex gap-5 max-h-150">
       <div class="w-50% text-gray-90">
         <div class="mt-50 text-banner-sm-denser">Full-Stack Developer</div>
         <p class="text-banner-lg-denser">Willis Wu</p>
@@ -57,19 +58,22 @@ import Card from '../components/CaseCard.vue'
     </div>
     <div class="mt-20">
       <div class="text-(headline-xl-lighter gray-90)">Featured Works</div>
-      <p class="w-70% text-(content-md gray-70)">
+      <p class="max-w-150 text-(content-md gray-70)">
         Experience in in-house development and creating successful
-        consumer-facing (B2C) solutions, including Shopify e-commerce.
+        consumer-facing (B2C) solutions, including e-commerce.
       </p>
       <div class="mt-10 pr-20 flex flex-wrap gap-10">
         <Card
-          :title="'123456'"
-          :description="'456789'"
-          :image="'https://fakeimg.pl/600x750'"
-          :path="'/works'"
+          v-for="item in cases.slice(0, 2)"
+          :key="item.path"
+          class="max-w-200"
+          :title="item.title"
+          :description="item.description"
+          :image="item.image"
+          :path="item.path"
         />
       </div>
-      <div class="mt-20 mb-50 pr-20 flex flex-center">
+      <div class="mt-10 mb-40">
         <router-link
           to="/works"
           class="px-4 py-2 border-(solid 1.5px gray-70) rounded-2 trans-200 hover:(bg-gray-70 text-white)"
