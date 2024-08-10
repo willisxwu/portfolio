@@ -86,14 +86,16 @@ const props = withDefaults(
     </div>
 
     <div class="mt-20">
-      <div class="text-(headline-md-lighter gray-90)">Outcome</div>
-      <div v-for="item in props.caseOutcome" :key="item.title">
-        <p class="max text-(content-md gray-70)" v-text="item.title"></p>
-        <img
-          class="mt-5 max-w-200 rounded-2"
-          :src="item.image"
-          alt="case-outcome-image"
-        />
+      <div class="mb-5 text-(headline-md-lighter gray-90)">Outcome</div>
+      <div class="flex flex-col gap-15">
+        <div v-for="item in props.caseOutcome" :key="item.title">
+          <p class="text-(content-sm gray-70)" v-text="item.title"></p>
+          <img
+            class="mt-3 max-w-200 rounded-2"
+            :src="item.image"
+            alt="case-outcome-image"
+          />
+        </div>
       </div>
     </div>
 
