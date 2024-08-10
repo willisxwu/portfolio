@@ -21,9 +21,7 @@ const props = withDefaults(
     <div
       class="p-5 flex bg-white rounded-2 trans-300 hover:(shadow-lg scale-102)"
     >
-      <div
-        class="flex flex-center w-200 aspect-4/3 rounded-2 overflow-hidden bg-light-green-40"
-      >
+      <div class="flex flex-center w-200 aspect-4/3 rounded-2 overflow-hidden">
         <img class="w-auto h-full" :src="props.image" alt="case-image" />
       </div>
       <div class="px-5 pt-5 flex flex-col justify-between w-full">
