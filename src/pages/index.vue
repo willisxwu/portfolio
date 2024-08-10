@@ -73,7 +73,7 @@ import { cases } from '../constant/cases'
           :path="`/works/${item.handle}`"
         />
       </div>
-      <div class="mt-10 mb-40">
+      <div class="mt-10">
         <router-link
           to="/works"
           class="px-4 py-2 border-(solid 1.5px gray-70) rounded-2 trans-200 hover:(bg-gray-70 text-white)"

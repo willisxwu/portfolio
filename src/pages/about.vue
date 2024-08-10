@@ -77,7 +77,7 @@ const philosophyItems: IPhilosophyItems[] = [
         />
       </div>
     </div>
-    <div class="pb-40">
+    <div>
       <p class="text-(content-md-denser gray-70)">Education</p>
       <p class="mt-5 text-(headline-sm-lighter gray-90)">
         B.Sc. in Information Management
