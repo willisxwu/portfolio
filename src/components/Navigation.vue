@@ -8,7 +8,6 @@ interface INavigationItem {
   name: string
 }
 
-const { currentRoute } = useRouter()
 const navigationItems: INavigationItem[] = [
   {
     path: '/',
@@ -23,6 +22,13 @@ const navigationItems: INavigationItem[] = [
     name: 'Works',
   },
 ]
+const { currentRoute } = useRouter()
+const isActive = (path: string): boolean => {
+  if (path === '/works') {
+    return currentRoute.value.path.startsWith('/works')
+  }
+  return currentRoute.value.path === path
+}
 const isHidden = ref(false)
 
 let lastScrollTop = 0
@@ -78,11 +84,10 @@ onUnmounted(() => {
           :key="item.path"
           :to="item.path"
           class="trans-300 hover:scale-120"
-          :class="{ 'text-bold ': currentRoute.path === item.path }"
+          :class="{ 'text-bold': isActive(item.path) }"
           v-text="item.name"
         >
         </router-link>
-        <div class="cursor-pointer trans-300 hover:scale-120">Contact</div>
       </div>
     </div>
   </div>
