@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import linkedIn from '../assets/linkedIn.svg'
 import Card from '../components/CaseCard.vue'
 import { cases } from '../constant/cases'
 </script>
@@ -19,8 +18,13 @@ import { cases } from '../constant/cases'
           <a
             class="flex flex-center"
             href="https://www.linkedin.com/in/willisxwu/"
+            target="_blank"
           >
-            <img :src="linkedIn" class="w-11" alt="linkedIn" />
+            <img
+              src="https://img.icons8.com/ios-filled/200/585858/linkedin.png"
+              class="w-11"
+              alt="linkedIn"
+            />
           </a>
           <router-link
             to="/about"
