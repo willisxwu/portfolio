@@ -15,7 +15,7 @@ const props = withDefaults(
     criteriaDescription: string
     caseCriteria: ICaseCriteria[]
     caseChallenge: ICaseChallenge[]
-    caseOutcome: ICaseOutcome[]
+    caseOutcome?: ICaseOutcome[]
   }>(),
   {},
 )
@@ -85,7 +85,7 @@ const props = withDefaults(
       </div>
     </div>
 
-    <div class="mt-20">
+    <div v-if="props.caseOutcome" class="mt-20">
       <div class="mb-5 text-(headline-md-lighter gray-90)">Outcome</div>
       <div class="flex flex-col gap-15">
         <div v-for="item in props.caseOutcome" :key="item.title">
@@ -98,7 +98,7 @@ const props = withDefaults(
         </div>
       </div>
     </div>
-
+    <slot />
     <div class="mt-20">
       <router-link
         to="/works"
