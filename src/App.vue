@@ -11,7 +11,7 @@ const handleNavigationHeight = (value: number) => {
 
 <template>
   <Navigation @navigationHeight="handleNavigationHeight" />
-  <main :style="{ marginTop: navigationHeight + 'px' }">
+  <main class="overflow-hidden" :style="{ marginTop: navigationHeight + 'px' }">
     <router-view />
   </main>
   <Footer />
