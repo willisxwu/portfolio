@@ -30,9 +30,9 @@ const philosophyItems: IPhilosophyItems[] = [
 </script>
 
 <template>
-  <div class="px-20 flex flex-col gap-20">
-    <div class="flex gap-5 max-h-screen">
-      <div class="pt-20 max-w-200">
+  <div class="flex flex-col gap-20 lg:px-20">
+    <div class="flex flex-col-reverse gap-15 lg:(flex-row gap-5 max-h-90vh)">
+      <div class="px-6 md:px-10 lg:(px-0 pt-20 w-50%)">
         <p class="text-banner-lg-denser text-gray-90">Willis Wu</p>
         <p class="my-5 text-(headline-lg-lighter gray-90)">
           A Streamlined-Approach Developer
@@ -54,31 +54,35 @@ const philosophyItems: IPhilosophyItems[] = [
           effectiveness, and the seamless integration of form and function.
         </p>
       </div>
-      <div class="flex flex-center overflow-hidden">
+      <div
+        class="w-full flex flex-center aspect-1/1 overflow-hidden md:(mx-10 mb-10 w-unset rounded-2) lg:(m-0 items-end w-50% rounded-0 aspect-unset)"
+      >
         <img
-          class="w-auto h-full object-cover"
-          src="https://fakeimg.pl/1000x750/"
+          class="w-full h-auto"
+          src="https://fakeimg.pl/1000x1000/"
           alt="photo"
         />
       </div>
     </div>
-    <div>
-      <p class="text-(content-md-denser gray-70)">
+    <div class="px-6 md:px-10 lg:px-0">
+      <p class="text-(headline-md-lighter gray-70) md:text-content-md-denser">
         Willis’s Development Philosophy
       </p>
       <div class="mt-5 flex flex-wrap gap-5">
         <SpotlightCard
           v-for="item in philosophyItems"
           :key="item.title"
-          class="max-w-85"
+          class="md:max-w-65 lg:max-w-85"
           :image="item.image"
           :title="item.title"
           :description="item.description"
         />
       </div>
     </div>
-    <div>
-      <p class="text-(content-md-denser gray-70)">Education</p>
+    <div class="px-6 md:px-10 lg:px-0">
+      <p class="text-(headline-md-lighter gray-70) md:text-content-md-denser">
+        Education
+      </p>
       <p class="mt-5 text-(headline-sm-lighter gray-90)">
         B.Sc. in Information Management
       </p>
