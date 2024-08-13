@@ -160,7 +160,7 @@ const currentMobileTitle = computed(() => {
       </div>
       <div
         :class="[
-          'w-full bg-white text-(banner-md gray-90) bg-opacity-50 backdrop-blur-2xl overflow-hidden transition-[max-height] duration-250 ease-in-out	',
+          'relative w-full bg-white text-(banner-md gray-90) bg-opacity-50 backdrop-blur-2xl overflow-hidden transition-[max-height] duration-250 ease-in-out	z-high',
           isMenuOpen ? 'max-h-100vh' : 'max-h-0',
         ]"
       >
