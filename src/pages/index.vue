@@ -81,7 +81,9 @@ const experienceList: IExperience[] = [
         Experience in in-house development and creating successful
         consumer-facing (B2C) solutions, including e-commerce.
       </p>
-      <div class="mt-6 grid gap-8 md:mt-8 lg:(mt-10 grid-cols-2)">
+      <div
+        class="mt-6 grid grid-cols-1 gap-2 md:(mt-8 gap-8) lg:(mt-10 grid-cols-2)"
+      >
         <CaseCard
           v-for="item in cases.slice(0, 2)"
           :key="item.handle"
