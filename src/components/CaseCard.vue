@@ -19,13 +19,13 @@ const props = withDefaults(
 <template>
   <router-link :to="path">
     <div
-      class="p-3 flex gap-5 bg-white rounded-2 trans-300 md:p-5 lg:hover:(shadow-lg scale-102)"
+      class="p-3 flex gap-5 bg-white border-(solid 1.5px gray-20) rounded-2 trans-300 md:p-5 lg:hover:(shadow-lg scale-102)"
     >
-      <img
-        class="w-40% aspect-4/3 rounded-2 md:w-40% lg:w-40%"
-        :src="props.image"
-        alt="case-image"
-      />
+      <div
+        class="flex flex-center w-40% aspect-4/3 rounded-2 overflow-hidden md:w-40% lg:w-40%"
+      >
+        <img class="w-auto h-full" :src="props.image" alt="case-image" />
+      </div>
       <div class="w-60% flex flex-col justify-center md:(pt-5 justify-between)">
         <div class="flex flex-col gap-2.5">
           <p
@@ -33,7 +33,7 @@ const props = withDefaults(
             v-text="props.title"
           ></p>
           <p
-            class="hidden text-(content-md gray-70) md:block"
+            class="hidden text-(content-md gray-70) md:(block min-h-30) lg:min-h-28"
             v-text="props.description"
           ></p>
         </div>
