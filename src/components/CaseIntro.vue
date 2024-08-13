@@ -22,8 +22,9 @@ const props = withDefaults(
 </script>
 
 <template>
-  <div class="px-50 pt-20">
-    <div class="py-5 max-w-250">
+  <div class="px-6 pt-10 flex flex-col gap-20 md:(px-10 pt-5) lg:(px-50 pt-10)">
+    <!-- Case Head -->
+    <div class="py-5 md:max-w-200 lg:max-w-250">
       <div
         class="text-(title-lg-lighter gray-90)"
         v-text="props.caseIntro.title"
@@ -37,10 +38,10 @@ const props = withDefaults(
         v-text="props.caseIntro.effect"
       ></p>
     </div>
-
-    <div class="mt-20 flex flex-wrap gap-10">
+    <!-- Case Lists -->
+    <div class="flex flex-wrap gap-5">
       <div
-        class="p-5 w-100 bg-white rounded-2"
+        class="p-5 w-full bg-white rounded-2 lg:max-w-85"
         v-for="list in props.caseLists"
         :key="list.title"
       >
@@ -52,11 +53,11 @@ const props = withDefaults(
         </ul>
       </div>
     </div>
-
-    <div class="mt-20">
+    <!-- Case Criteria -->
+    <div>
       <div class="text-(headline-md-lighter gray-90)">Development Criteria</div>
       <p
-        class="max-w-250 text-(content-md gray-70)"
+        class="text-(content-md gray-70) md:max-w-200 lg:max-w-250"
         v-text="props.criteriaDescription"
       ></p>
       <div class="mt-5 flex flex-wrap gap-5">
@@ -70,13 +71,13 @@ const props = withDefaults(
         />
       </div>
     </div>
-
-    <div class="mt-20">
+    <!-- Case Challenges -->
+    <div>
       <div class="mb-5 text-(headline-md-lighter gray-90)">
         Development Challenges
       </div>
       <div
-        class="mt-5 max-w-250"
+        class="mt-5 md:max-w-200 lg:max-w-250"
         v-for="item in props.caseChallenge"
         :key="item.title"
       >
@@ -84,25 +85,27 @@ const props = withDefaults(
         <p class="text-(content-sm gray-70)" v-text="item.description"></p>
       </div>
     </div>
-
-    <div v-if="props.caseOutcome" class="mt-20">
+    <!-- Case Outcome -->
+    <div v-if="props.caseOutcome">
       <div class="mb-5 text-(headline-md-lighter gray-90)">Outcome</div>
       <div class="flex flex-col gap-15">
         <div v-for="item in props.caseOutcome" :key="item.title">
           <p class="text-(content-sm gray-70)" v-text="item.title"></p>
           <img
-            class="mt-3 max-w-200 rounded-2"
+            class="mt-3 w-full rounded-2 md:max-w-200"
             :src="item.image"
             alt="case-outcome-image"
           />
         </div>
       </div>
     </div>
+    <!-- For Slot -->
     <slot />
-    <div class="mt-20">
+    <!-- Works Link -->
+    <div>
       <router-link
         to="/works"
-        class="px-4 py-2 border-(solid 1.5px gray-70) rounded-2 trans-200 hover:(bg-gray-70 text-white)"
+        class="px-4 py-2 block w-fit border-(solid 1.5px gray-70) rounded-2 trans-200 hover:(bg-gray-70 text-white)"
       >
         View More Works
       </router-link>

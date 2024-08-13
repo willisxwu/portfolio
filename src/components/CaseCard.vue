@@ -19,17 +19,28 @@ const props = withDefaults(
 <template>
   <router-link :to="path">
     <div
-      class="p-5 flex bg-white rounded-2 trans-300 hover:(shadow-lg scale-102)"
+      class="p-3 flex gap-5 bg-white rounded-2 trans-300 md:p-5 lg:hover:(shadow-lg scale-102)"
     >
-      <div class="flex flex-center w-200 aspect-4/3 rounded-2 overflow-hidden">
-        <img class="w-auto h-full" :src="props.image" alt="case-image" />
-      </div>
-      <div class="px-5 pt-5 flex flex-col justify-between w-full">
+      <img
+        class="w-40% aspect-4/3 rounded-2 md:w-40% lg:w-40%"
+        :src="props.image"
+        alt="case-image"
+      />
+      <div class="w-60% flex flex-col justify-center md:(pt-5 justify-between)">
         <div class="flex flex-col gap-2.5">
-          <p class="text-(headline-md gray-90)" v-text="props.title"></p>
-          <p class="text-(content-md gray-70)" v-text="props.description"></p>
+          <p
+            class="text-(title-md gray-90) md:text-headline-md"
+            v-text="props.title"
+          ></p>
+          <p
+            class="hidden text-(content-md gray-70) md:block"
+            v-text="props.description"
+          ></p>
         </div>
-        <div v-if="isShowHint" class="flex justify-end items-center gap-2">
+        <div
+          v-if="isShowHint"
+          class="hidden md:(flex justify-end items-center gap-2)"
+        >
           <p
             class="text-(caption-md-bolder-sparser gray-90 right) hover:text-gray-80"
             v-text="hint"
