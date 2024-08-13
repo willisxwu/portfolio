@@ -24,7 +24,8 @@ const experienceList: IExperience[] = [
 </script>
 
 <template>
-  <div class="flex flex-col gap-20 lg:pl-20">
+  <div class="flex flex-col gap-20 lg:px-20">
+    <!-- Intro and Image -->
     <div class="flex flex-col-reverse gap-15 lg:(flex-row gap-5 max-h-80vh)">
       <div class="px-6 text-gray-90 md:px-10 lg:(px-0 w-50%)">
         <div class="text-banner-sm-denser lg:mt-50">Full-Stack Developer</div>
@@ -48,7 +49,7 @@ const experienceList: IExperience[] = [
           </a>
           <router-link
             to="/about"
-            class="px-4 py-2 border-(solid 1.5px gray-70) rounded-2 trans-200 hover:(bg-gray-70 text-white)"
+            class="px-4 py-1 bg-gray-70 text-white text-content-md-bolder rounded-1.5 trans-200 hover:(bg-gray-50 text-white)"
           >
             About Me
           </router-link>
@@ -64,39 +65,38 @@ const experienceList: IExperience[] = [
         />
       </div>
     </div>
+    <!-- Experience -->
     <div
       class="px-6 grid grid-cols-1 gap-5 md:(px-10 grid-cols-3 max-w-300) lg:px-0"
     >
       <div v-for="item in experienceList" :key="item.title">
-        <p class="text-(headline-xl-lighter gray-90)" v-text="item.title"></p>
+        <p class="text-(headline-xl gray-90)" v-text="item.title"></p>
         <p class="text-(content-md gray-70)" v-text="item.description"></p>
       </div>
     </div>
+    <!-- Featured Works -->
     <div class="px-6 md:px-10 lg:px-0">
-      <div class="text-(headline-xl-lighter gray-90)">Featured Works</div>
+      <div class="text-(headline-xl gray-90)">Featured Works</div>
       <p class="max-w-150 text-(content-md gray-70)">
         Experience in in-house development and creating successful
         consumer-facing (B2C) solutions, including e-commerce.
       </p>
-      <div class="mt-6 flex flex-wrap gap-5 md:mt-8 lg:(mt-10 gap-10)">
+      <div class="mt-6 grid gap-8 md:mt-8 lg:(mt-10 grid-cols-2)">
         <CaseCard
           v-for="item in cases.slice(0, 2)"
           :key="item.handle"
-          class="w-full lg:max-w-200"
           :title="item.title"
           :description="item.description"
           :image="item.image"
           :path="`/works/${item.handle}`"
         />
       </div>
-      <div class="mt-6 md:mt-10">
-        <router-link
-          to="/works"
-          class="px-4 py-2 block w-fit border-(solid 1.5px gray-70) rounded-2 trans-200 hover:(bg-gray-70 text-white)"
-        >
-          View More Works
-        </router-link>
-      </div>
+      <router-link
+        to="/works"
+        class="mt-5 px-4 py-1 w-fit block bg-gray-70 text-white text-content-md-bolder rounded-1.5 trans-200 hover:(bg-gray-50 text-white)"
+      >
+        View More
+      </router-link>
     </div>
   </div>
 </template>

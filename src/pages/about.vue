@@ -31,13 +31,14 @@ const philosophyItems: IPhilosophyItems[] = [
 
 <template>
   <div class="flex flex-col gap-20 lg:px-20">
-    <div class="flex flex-col-reverse gap-15 lg:(flex-row gap-5 max-h-90vh)">
+    <!-- About Intro and Image -->
+    <div class="flex flex-col-reverse gap-15 lg:(flex-row max-h-90vh)">
       <div class="px-6 md:px-10 lg:(px-0 pt-20 w-50%)">
         <p class="text-banner-lg-denser text-gray-90">Willis Wu</p>
-        <p class="my-5 text-(headline-lg-lighter gray-90)">
+        <p class="mt-5 text-(headline-lg-lighter gray-90)">
           A Streamlined-Approach Developer
         </p>
-        <p class="text-(content-md-denser gray-70)">
+        <p class="mt-10 text-(content-md-denser gray-70) lg:text-content-md">
           With over five years of experience in development, I champion the
           philosophy of <strong>"less is more"</strong>, believing that
           simplicity leads to powerful, maintainable code. I focus on creating
@@ -64,23 +65,24 @@ const philosophyItems: IPhilosophyItems[] = [
         />
       </div>
     </div>
+    <!-- Philosophy -->
     <div class="px-6 md:px-10 lg:px-0">
-      <p class="text-(headline-md-lighter gray-70) md:text-content-md-denser">
+      <p class="text-(headline-md-lighter gray-90) md:text-content-md-denser">
         Willis’s Development Philosophy
       </p>
-      <div class="mt-5 flex flex-wrap gap-5">
+      <div class="mt-5 grid gap-5 md:grid-cols-2 lg:(max-w-330 grid-cols-3)">
         <SpotlightCard
           v-for="item in philosophyItems"
           :key="item.title"
-          class="md:max-w-65 lg:max-w-85"
           :image="item.image"
           :title="item.title"
           :description="item.description"
         />
       </div>
     </div>
+    <!-- Education -->
     <div class="px-6 md:px-10 lg:px-0">
-      <p class="text-(headline-md-lighter gray-70) md:text-content-md-denser">
+      <p class="text-(headline-md-lighter gray-90) md:text-content-md-denser">
         Education
       </p>
       <p class="mt-5 text-(headline-sm-lighter gray-90)">
