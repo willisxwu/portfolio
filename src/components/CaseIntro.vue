@@ -22,7 +22,9 @@ const props = withDefaults(
 </script>
 
 <template>
-  <div class="px-6 pt-10 flex flex-col gap-20 md:(px-10 pt-5) lg:(px-50 pt-10)">
+  <div
+    class="px-6 pt-10 flex flex-col gap-10 md:(px-10 pt-5 gap-15) lg:(px-20 pt-10 gap-20)"
+  >
     <!-- Case Head -->
     <div class="py-5 md:max-w-200 lg:max-w-250">
       <div
@@ -39,9 +41,11 @@ const props = withDefaults(
       ></p>
     </div>
     <!-- Case Lists -->
-    <div class="flex flex-wrap gap-5">
+    <div
+      class="grid grid-cols-1 gap-5 md:grid-cols-2 lg:( max-w-330 grid-cols-3)"
+    >
       <div
-        class="p-5 w-full bg-white rounded-2 lg:max-w-85"
+        class="p-5 bg-white rounded-2"
         v-for="list in props.caseLists"
         :key="list.title"
       >
@@ -55,16 +59,17 @@ const props = withDefaults(
     </div>
     <!-- Case Criteria -->
     <div>
-      <div class="text-(headline-md-lighter gray-90)">Development Criteria</div>
+      <div class="mb-5 text-(headline-md gray-90)">Development Criteria</div>
       <p
         class="text-(content-md gray-70) md:max-w-200 lg:max-w-250"
         v-text="props.criteriaDescription"
       ></p>
-      <div class="mt-5 flex flex-wrap gap-5">
+      <div
+        class="mt-5 grid grid-cols-1 gap-5 md:grid-cols-2 lg:( max-w-330 grid-cols-3)"
+      >
         <SpotlightCard
           v-for="item in props.caseCriteria"
           :key="item.title"
-          class="max-w-85"
           :image="item.image"
           :title="item.title"
           :description="item.description"
@@ -73,9 +78,7 @@ const props = withDefaults(
     </div>
     <!-- Case Challenges -->
     <div>
-      <div class="mb-5 text-(headline-md-lighter gray-90)">
-        Development Challenges
-      </div>
+      <div class="text-(headline-md gray-90)">Development Challenges</div>
       <div
         class="mt-5 md:max-w-200 lg:max-w-250"
         v-for="item in props.caseChallenge"
@@ -87,7 +90,7 @@ const props = withDefaults(
     </div>
     <!-- Case Outcome -->
     <div v-if="props.caseOutcome">
-      <div class="mb-5 text-(headline-md-lighter gray-90)">Outcome</div>
+      <div class="mb-5 text-(headline-md gray-90)">Outcome</div>
       <div class="flex flex-col gap-15">
         <div v-for="item in props.caseOutcome" :key="item.title">
           <p class="text-(content-sm gray-70)" v-text="item.title"></p>
@@ -102,13 +105,11 @@ const props = withDefaults(
     <!-- For Slot -->
     <slot />
     <!-- Works Link -->
-    <div>
-      <router-link
-        to="/works"
-        class="px-4 py-2 block w-fit border-(solid 1.5px gray-70) rounded-2 trans-200 hover:(bg-gray-70 text-white)"
-      >
-        View More Works
-      </router-link>
-    </div>
+    <router-link
+      to="/works"
+      class="mt-5 px-4 py-1 w-fit block bg-gray-90 text-white text-content-md-bolder rounded-1.5 trans-200 hover:(bg-gray-50 text-white)"
+    >
+      View More Works
+    </router-link>
   </div>
 </template>
