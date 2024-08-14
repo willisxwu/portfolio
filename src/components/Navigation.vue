@@ -155,20 +155,36 @@ const currentMobileTitle = computed(() => {
             v-text="currentMobileTitle"
           ></span>
         </div>
-        <img
-          class="p-4 w-8 aspect-ratio-1/1"
-          src="https://img.icons8.com/forma-regular-filled/100/2d2d2d/menu.png"
-          alt="menu-icon"
-          @click="toggleMenu"
-        />
+        <div class="p-4 flex items-center">
+          <div @click="toggleMenu" class="cursor-pointer flex flex-col gap-1.5">
+            <div
+              :class="[
+                'w-8 h-0.5 bg-gray-90 rounded transition-transform duration-300 ease-in-out',
+                isMenuOpen ? 'transform rotate-45 translate-y-2' : '',
+              ]"
+            ></div>
+            <div
+              :class="[
+                'w-8 h-0.5 bg-gray-90 rounded transition-opacity duration-250 ease-in-out',
+                isMenuOpen ? 'opacity-0' : '',
+              ]"
+            ></div>
+            <div
+              :class="[
+                'w-8 h-0.5 bg-gray-90 rounded transition-transform duration-250 ease-in-out',
+                isMenuOpen ? 'transform -rotate-45 -translate-y-2' : '',
+              ]"
+            ></div>
+          </div>
+        </div>
       </div>
       <div
         :class="[
-          'relative w-full bg-white text-(banner-md gray-90) bg-opacity-50 backdrop-blur-2xl overflow-hidden transition-[max-height] duration-250 ease-in-out	z-high',
+          'w-full bg-white text-(banner-md gray-90) overflow-hidden transition-[max-height] duration-250 ease-in-out',
           isMenuOpen ? 'max-h-100vh' : 'max-h-0',
         ]"
       >
-        <div class="px-19 pt-20 flex flex-col gap-10 h-100vh">
+        <div class="px-15 py-20 h-100vh w-full flex flex-col gap-10">
           <router-link
             v-for="item in navigationItems"
             :key="item.path"
@@ -177,6 +193,31 @@ const currentMobileTitle = computed(() => {
             @click="toggleMenu"
           >
           </router-link>
+          <a href="mailto:willisxwu@gmail.com">Contact</a>
+          <div class="mt-10 flex gap-8">
+            <a
+              class="flex flex-center"
+              href="https://www.linkedin.com/in/willisxwu/"
+              target="_blank"
+            >
+              <img
+                src="https://img.icons8.com/ios-filled/100/2D2D2D/linkedin.png"
+                class="w-10"
+                alt="linkedIn"
+              />
+            </a>
+            <a
+              class="flex flex-center"
+              href="https://github.com/willisxwu"
+              target="_blank"
+            >
+              <img
+                src="https://img.icons8.com/ios-filled/100/2D2D2D/github.png"
+                class="w-10"
+                alt="github-icon"
+              />
+            </a>
+          </div>
         </div>
       </div>
     </div>
