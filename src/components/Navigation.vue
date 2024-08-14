@@ -142,7 +142,11 @@ const currentMobileTitle = computed(() => {
       <div
         class="flex justify-between w-full bg-white border-b-(solid 1.5px gray-10)"
       >
-        <router-link to="/" class="p-4 flex flex-center">
+        <router-link
+          to="/"
+          class="p-4 flex flex-center"
+          @click="isMenuOpen = false"
+        >
           <img :src="logo" class="w-6 aspect-ratio-1/1" alt="logo" />
         </router-link>
         <div class="flex justify-start items-center w-full">
