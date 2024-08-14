@@ -24,7 +24,7 @@ export const cases: ICaseInfo[] = [
     handle: 'themed-interactive-game-page',
     image: themedGameImage,
     title: 'Themed Interactive Game Page',
-    description: 'Developed a themed interactive game for a UK online shopping website, boosting product exposure and guiding new customer registrations.',
+    description: 'Developed an interactive game for a UK shopping website, boosting product exposure and guiding customer registrations.',
     effect: 'The creation of the themed interactive game page enhanced product visibility and attracted new customers by engaging them in a fun and interactive way, ultimately driving traffic and registrations to the website.'
   },
   {
