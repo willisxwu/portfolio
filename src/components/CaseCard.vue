@@ -29,11 +29,11 @@ const props = withDefaults(
       <div class="w-60% flex flex-col justify-center md:(pt-5 justify-between)">
         <div class="flex flex-col gap-2.5">
           <p
-            class="text-(title-md gray-90) md:text-headline-md"
+            class="text-(title-md gray-90) md:text-title-xl"
             v-text="props.title"
           ></p>
           <p
-            class="hidden text-(content-md gray-70) md:(block min-h-30) lg:min-h-28"
+            class="hidden text-(content-md gray-70) md:(block)"
             v-text="props.description"
           ></p>
         </div>
