@@ -103,11 +103,13 @@ const props = withDefaults(
       </div>
     </div>
     <!-- For Slot -->
-    <slot />
+    <div>
+      <slot />
+    </div>
     <!-- Works Link -->
     <router-link
       to="/works"
-      class="mt-5 px-4 py-1 w-fit block bg-gray-90 text-white text-content-md-bolder rounded-1.5 trans-200 hover:(bg-gray-50 text-white)"
+      class="px-4 py-1 w-fit block bg-gray-70 text-white text-content-md-bolder rounded-1.5 trans-200 hover:(bg-gray-50 text-white)"
     >
       View More Works
     </router-link>

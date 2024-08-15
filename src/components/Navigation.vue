@@ -180,7 +180,7 @@ const currentMobileTitle = computed(() => {
       </div>
       <div
         :class="[
-          'w-full bg-white text-(banner-md gray-90) overflow-hidden transition-[max-height] duration-250 ease-in-out',
+          'w-full bg-white text-(banner-md gray-70) overflow-hidden transition-[max-height] duration-250 ease-in-out',
           isMenuOpen ? 'max-h-100vh' : 'max-h-0',
         ]"
       >
@@ -201,7 +201,7 @@ const currentMobileTitle = computed(() => {
               target="_blank"
             >
               <img
-                src="https://img.icons8.com/ios-filled/100/2D2D2D/linkedin.png"
+                src="https://img.icons8.com/ios-filled/100/585858/linkedin.png"
                 class="w-10"
                 alt="linkedIn"
               />
@@ -212,7 +212,7 @@ const currentMobileTitle = computed(() => {
               target="_blank"
             >
               <img
-                src="https://img.icons8.com/ios-filled/100/2D2D2D/github.png"
+                src="https://img.icons8.com/ios-filled/100/585858/github.png"
                 class="w-10"
                 alt="github-icon"
               />

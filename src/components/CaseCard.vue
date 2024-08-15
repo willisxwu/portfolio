@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { useBreakpoints } from '../hooks/useBreakpoints'
+
 const props = withDefaults(
   defineProps<{
     title: string
@@ -14,6 +16,8 @@ const props = withDefaults(
     isShowHint: true,
   },
 )
+
+const { isMobile } = useBreakpoints()
 </script>
 
 <template>
@@ -33,13 +37,14 @@ const props = withDefaults(
             v-text="props.title"
           ></p>
           <p
-            class="hidden text-(content-md gray-70) md:(block)"
+            v-show="!isMobile"
+            class="md:(text-(content-md gray-70 ellipsis) line-clamp-3 overflow-hidden)"
             v-text="props.description"
           ></p>
         </div>
         <div
           v-if="isShowHint"
-          class="hidden md:(flex justify-end items-center gap-2)"
+          class="hidden md:(mt-5 flex justify-end items-center gap-2)"
         >
           <p
             class="text-(caption-md-bolder-sparser gray-90 right) hover:text-gray-80"
