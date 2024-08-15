@@ -1,15 +1,18 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Page Not Found</title>
   </head>
   <body>
-    <script>
-      // Redirect all 404 requests to the index.html
-      // This will allow Vue Router to handle the routing
-      window.location.replace('/portfolio/')
+    <script type="text/javascript">
+      // 導向到 index.html，並保留當前的路徑
+      const redirectTo = window.location.pathname.replace(
+        '/portfolio/',
+        '/portfolio/index.html',
+      )
+      window.location.replace(redirectTo)
     </script>
   </body>
 </html>
