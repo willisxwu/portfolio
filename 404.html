@@ -7,12 +7,10 @@
   </head>
   <body>
     <script type="text/javascript">
-      // 導向到 index.html，並保留當前的路徑
-      const redirectTo = window.location.pathname.replace(
-        '/portfolio/',
-        '/portfolio/index.html',
-      )
-      window.location.replace(redirectTo)
+      // 如果當前不是根的路徑，重導向到 index.html
+      if (!location.pathname.startsWith('/portfolio/')) {
+        history.replaceState(null, '', '/portfolio/')
+      }
     </script>
   </body>
 </html>
