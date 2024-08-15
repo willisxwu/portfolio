@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import CaseCard from '../components/CaseCard.vue'
 import { cases } from '../constant/cases'
+import photoWithTransparent from '../assets/home-intro-photo.png'
 
 interface IExperience {
   title: string
@@ -27,7 +28,9 @@ const experienceList: IExperience[] = [
   <div class="flex flex-col gap-20 lg:px-20">
     <!-- Intro and Image -->
     <div class="flex flex-col-reverse gap-15 lg:(flex-row gap-5 max-h-80vh)">
-      <div class="px-6 text-gray-90 md:px-10 lg:(px-0 w-50%)">
+      <div
+        class="px-6 text-gray-90 md:(absolute w-full px-10 py-10 bg-cream-10/50 z-medium) lg:(relative p-0 w-50% bg-transparent)"
+      >
         <div class="text-banner-sm-denser lg:mt-50">Full-Stack Developer</div>
         <p class="text-banner-lg-denser">Willis Wu</p>
         <p class="max-w-150 text-(content-md gray-70) lg:max-w-unset">
@@ -56,11 +59,14 @@ const experienceList: IExperience[] = [
         </div>
       </div>
       <div
-        class="w-full flex flex-center aspect-1/1 overflow-hidden md:(mx-10 mb-10 w-unset rounded-2) lg:(m-0 w-50% rounded-0 aspect-unset)"
+        class="relative w-full flex flex-center aspect-1/1 overflow-hidden lg:(m-0 w-50% rounded-2)"
       >
+        <div
+          class="w-full h-full z-low bg-gradient-to-tl from-transparent via-gray-20 to-transparent"
+        ></div>
         <img
-          class="w-full h-auto"
-          src="https://fakeimg.pl/1000x1000/"
+          class="absolute w-full h-auto z-low opacity-90 md:(w-auto h-full opacity-100)"
+          :src="photoWithTransparent"
           alt="photo"
         />
       </div>
