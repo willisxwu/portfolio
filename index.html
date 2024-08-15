@@ -8,6 +8,19 @@
   </head>
   <body>
     <div id="app"></div>
+    <script type="module">
+      // 如果當前不是根的路徑，重導向到 index.html
+      if (!location.pathname.startsWith('/portfolio/')) {
+        history.replaceState(null, '', '/portfolio/')
+      } else {
+        // 檢查是否有 redirect 查詢參數，並重定向到對應路徑
+        const params = new URLSearchParams(window.location.search)
+        const redirect = params.get('redirect')
+        if (redirect) {
+          window.history.replaceState(null, '', redirect)
+        }
+      }
+    </script>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
