@@ -76,31 +76,33 @@ const outcomeTitle: string =
     :case-criteria="criteriaItems"
     :case-challenge="challenges"
   >
-    <div class="mt-20 mb-5 text-(headline-md-lighter gray-90)">Outcome</div>
-    <div class="flex flex-wrap gap-30">
-      <div>
-        <p class="text-(content-sm gray-70)" v-text="outcomeTitle"></p>
-        <iframe
-          src="https://www.youtube.com/embed/44lmf7sJvbg?mute=1&fs=0&modestbranding=1&rel=0&showinfo=0&iv_load_policy=3"
-          class="mt-3 w-80 aspect-ratio-9/16"
-          frameborder="0"
-          allow="autoplay; encrypted-media"
-          allowfullscreen="false"
-          muted
-        ></iframe>
-      </div>
-      <div class="flex flex-center flex-col gap-5">
-        <img
-          class="p-2 max-w-50 bg-white rounded-2"
-          src="https://cdn.shopify.com/s/files/1/0274/8717/files/star_wars_event_qr_code_400x@2x.png"
-          alt="themed-game-qr-code"
-        />
-        <a
-          class="px-4 py-2 bg-gray-100 text-(content-sm white) rounded-2 trans-200 hover:(bg-blue-100 text-white)"
-          href="https://shop.rhinoshield.uk/event/star-wars2023"
-          target="_blank"
-          >Play - Mobile Only</a
-        >
+    <div>
+      <div class="mt-20 mb-5 text-(headline-md-lighter gray-90)">Outcome</div>
+      <div class="flex flex-wrap gap-30">
+        <div>
+          <p class="text-(content-sm gray-70)" v-text="outcomeTitle"></p>
+          <iframe
+            src="https://www.youtube.com/embed/44lmf7sJvbg?mute=1&fs=0&modestbranding=1&rel=0&showinfo=0&iv_load_policy=3"
+            class="mt-3 w-80 aspect-ratio-9/16"
+            frameborder="0"
+            allow="autoplay; encrypted-media"
+            allowfullscreen="false"
+            muted
+          ></iframe>
+        </div>
+        <div class="flex flex-center flex-col gap-5">
+          <img
+            class="p-2 max-w-50 bg-white rounded-2"
+            src="https://cdn.shopify.com/s/files/1/0274/8717/files/star_wars_event_qr_code_400x@2x.png"
+            alt="themed-game-qr-code"
+          />
+          <a
+            class="px-4 py-2 bg-black text-(content-sm white) rounded-2 trans-200 hover:(bg-blue-100 text-white)"
+            href="https://shop.rhinoshield.uk/event/star-wars2023"
+            target="_blank"
+            >Play - Mobile Only</a
+          >
+        </div>
       </div>
     </div>
   </CaseIntro>
