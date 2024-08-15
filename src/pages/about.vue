@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import SpotlightCard from '../components/SpotlightCard.vue'
+import photo from '../assets/about-intro-photo.jpg'
 
 interface IPhilosophyItems {
   image: string
@@ -30,14 +31,23 @@ const philosophyItems: IPhilosophyItems[] = [
 </script>
 
 <template>
-  <div class="flex flex-col gap-20 lg:px-20">
+  <div class="flex flex-col gap-20 md:px-10 lg:px-20">
     <!-- About Intro and Image -->
-    <div class="flex flex-col-reverse gap-15 lg:(flex-row max-h-90vh)">
-      <div class="px-6 md:px-10 lg:(px-0 pt-20 w-50%)">
-        <p class="text-banner-lg-denser text-gray-90">Willis Wu</p>
-        <p class="mt-5 text-(headline-lg-lighter gray-90)">
-          A Streamlined-Approach Developer
-        </p>
+    <div class="flex flex-col-reverse gap-15 md:flex-row">
+      <div class="px-6 md:(px-0 w-full) lg:(pt-20 w-60%)">
+        <div class="flex justify-start items-center gap-5">
+          <img
+            class="hidden md:(block w-30 rounded-99 border-(solid 6px white) opacity-90 shadow) lg:hidden"
+            :src="photo"
+            alt="photo"
+          />
+          <div>
+            <p class="text-banner-lg-denser text-gray-90">Willis Wu</p>
+            <p class="mt-5 text-(headline-lg-lighter gray-90)">
+              A Streamlined-Approach Developer
+            </p>
+          </div>
+        </div>
         <p class="mt-10 text-(content-md-denser gray-70) lg:text-content-md">
           With over five years of experience in development, I champion the
           philosophy of <strong>"less is more"</strong>, believing that
@@ -56,17 +66,17 @@ const philosophyItems: IPhilosophyItems[] = [
         </p>
       </div>
       <div
-        class="w-full flex flex-center aspect-1/1 overflow-hidden md:(mx-10 mb-10 w-unset rounded-2) lg:(m-0 items-end w-50% rounded-0 aspect-unset)"
+        class="flex flex-center overflow-hidden md:hidden lg:(mt-10 p-5 w-40% flex items-start bg-white rounded-2 shadow)"
       >
         <img
-          class="w-full h-auto"
-          src="https://fakeimg.pl/1000x1000/"
+          class="w-full h-auto opacity-90 lg:rounded-2"
+          :src="photo"
           alt="photo"
         />
       </div>
     </div>
     <!-- Philosophy -->
-    <div class="px-6 md:px-10 lg:px-0">
+    <div class="px-6 md:px-0">
       <p class="text-(headline-md-lighter gray-90) md:text-content-md-denser">
         Willis’s Development Philosophy
       </p>
@@ -81,7 +91,7 @@ const philosophyItems: IPhilosophyItems[] = [
       </div>
     </div>
     <!-- Education -->
-    <div class="px-6 md:px-10 lg:px-0">
+    <div class="px-6 md:px-0">
       <p class="text-(headline-md-lighter gray-90) md:text-content-md-denser">
         Education
       </p>
