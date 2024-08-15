@@ -7,9 +7,15 @@
   </head>
   <body>
     <script type="text/javascript">
-      // 如果當前不是根的路徑，重導向到 index.html
+      // 如果當前不是根的路徑，重導向到 index.html，並附加原始路徑作為查詢參數
+      var target = location.pathname
       if (!location.pathname.startsWith('/portfolio/')) {
         history.replaceState(null, '', '/portfolio/')
+      } else {
+        // 重導向到 index.html 並保留原始路徑
+        location.replace(
+          '/portfolio/index.html?redirect=' + encodeURIComponent(target),
+        )
       }
     </script>
   </body>
