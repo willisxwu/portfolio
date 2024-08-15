@@ -12,3 +12,10 @@
     <div id="app"></div>
   </body>
 </html>
+
+<script>
+  // 如果當前不是根的路徑，重導向到 index.html
+  if (!location.pathname.startsWith('/repository/')) {
+    history.replaceState(null, '', '/repository/')
+  }
+</script>
