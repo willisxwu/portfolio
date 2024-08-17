@@ -52,7 +52,7 @@ const experienceList: IExperience[] = [
           </a>
           <router-link
             to="/about"
-            class="px-4 py-1 bg-gray-70 text-white text-content-md-bolder rounded-1.5 trans-200 hover:(bg-gray-50 text-white)"
+            class="px-4 py-1 bg-gray-70 text-brown-10 text-content-md-bolder rounded-1.5 trans-200 hover:(bg-gray-40)"
           >
             About Me
           </router-link>
@@ -101,9 +101,9 @@ const experienceList: IExperience[] = [
       </div>
       <router-link
         to="/works"
-        class="mt-5 px-4 py-1 w-fit block bg-gray-70 text-white text-content-md-bolder rounded-1.5 trans-200 hover:(bg-gray-50 text-white)"
+        class="mt-10 px-5 py-2 w-fit block text-(content-md-bolder gray-90) border-(solid 1.5px gray-90) rounded-10 trans-200 hover:(bg-gray-90 text-white)"
       >
-        View More
+        View More Works
       </router-link>
     </div>
   </div>
