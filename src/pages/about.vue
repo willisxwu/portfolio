@@ -31,7 +31,7 @@ const philosophyItems: IPhilosophyItems[] = [
 </script>
 
 <template>
-  <div class="flex flex-col gap-20 md:px-10 lg:px-20">
+  <div class="flex flex-col gap-20 md:px-10 pt-5 lg:(mx-auto pt-10 max-w-330)">
     <!-- About Intro and Image -->
     <div class="flex flex-col-reverse gap-15 md:flex-row">
       <div class="px-6 md:(px-0 w-full) lg:(pt-20 w-60%)">

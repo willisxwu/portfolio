@@ -4,7 +4,7 @@ import { cases } from '../../constant/cases'
 </script>
 
 <template>
-  <div class="px-6 pt-10 md:(px-10 pt-5) lg:(px-20 pt-20)">
+  <div class="px-6 pt-10 md:(px-10 pt-5) lg:(mx-auto pt-10 max-w-330)">
     <div class="text-(headline-xl gray-90)">Previous Works</div>
     <p class="max-w-150 text-(content-md gray-70)">
       Experience in in-house development and creating successful consumer-facing
