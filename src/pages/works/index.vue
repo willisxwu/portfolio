@@ -11,7 +11,7 @@ import { cases } from '../../constant/cases'
       (B2C) solutions, including e-commerce.
     </p>
     <div
-      class="mt-6 grid grid-cols-1 gap-2 md:(mt-8 gap-8) lg:(mt-10 grid-cols-2)"
+      class="mt-6 grid grid-cols-1 gap-2 md:(mt-8 gap-8) lg:(my-10 grid-cols-2)"
     >
       <Card
         v-for="item in cases"
