@@ -10,7 +10,7 @@ interface IExperience {
 
 const experienceList: IExperience[] = [
   {
-    title: '5+ years',
+    title: '4+ years',
     description: 'Full-Stack Development',
   },
   {
