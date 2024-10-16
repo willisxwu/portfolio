@@ -49,7 +49,7 @@ const philosophyItems: IPhilosophyItems[] = [
           </div>
         </div>
         <p class="mt-10 text-(content-md-denser gray-70) lg:text-content-md">
-          With over five years of experience in development, I champion the
+          With over four years of experience in development, I champion the
           philosophy of <strong>"less is more"</strong>, believing that
           simplicity leads to powerful, maintainable code. I focus on creating
           reusable features that enhance versatility and integrating external
